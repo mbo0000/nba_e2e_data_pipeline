@@ -8,7 +8,7 @@ This project delivers a streamlined solution for NBA statistics, offering a simp
 
 ## Project Requirements
 - Scalable and flexible data pipeline
-- Daily batch processing from reliable public sources
+- Daily update with the latest NBA data
 - Interactive, publicly accessible web-based dashboard
 - Low to no cost
 
@@ -55,17 +55,23 @@ For the extraction and loading process, we leverage a Python-based solution runn
 - **Data Sources**: Sourced from various NBA API endpoints. Execution will be triggerred by Airflow per preset scheduled.
 - **Process**: Once extracted, the raw data is loaded into Snowflake's staging area, ready for the next steps in the pipeline.
 
+Installation and setup instructions [here]().
+
 ### 3. Orchestration
 We will use Airflow as our orchestration tool to execute DAGs according to scheduled frequencies.
 - **DAG Generation**: DAGs will be procedurally generated using a template and configs for each endpoint. 
 - **Tasks**: Each DAG included tasks from data extraction, updating table schema, moving data from staging to raw, and cleanup operations to maintain system hygiene.
 - **Automation**: Ensuring tasks are performed on a specified schedule with minimal manual intervention, enhancing reliability and efficiency.
 
+Installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_airflow).
+
 ### 4. Transformation(dbt)
 The data transformation phase is handled by the Data Build Tool (dbt).
 - **Transformation Process**: Data in the raw layer is transformed using dbt, which allows us to apply models and configurations for the clean and analytics layers.
 - **Environment**: We utilize dbt Cloud for project hosting, providing a platform for daily execution and facilitating CI.
 - **Benefits**: This setup enables us to maintain high data quality and consistency, and readily adapt to changing project requirements.
+
+Installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_dbt_dev).
 
 ### 5. BI Solution
 
@@ -74,7 +80,7 @@ For our Business Intelligence (BI) solution, we use [Streamlit](https://streamli
 - **Deployment**: The application is hosted on the Streamlit server, providing easy public access to dashboards.
 - **User Interaction**: Streamlit allows users to interact with and visualize data through intuitive interfaces, making insights accessible and actionable.
 
-See [Resources section](#resources) for Airflow, Python data extraction container, dbt setups
+Installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_streamlit_dash_app).
 
 ## Future Work & Improvement
 - Consider serverless hosting(AWS, GCP) instead of local.
@@ -82,15 +88,7 @@ See [Resources section](#resources) for Airflow, Python data extraction containe
 - [Unit test](https://docs.getdbt.com/docs/build/unit-tests) on selected models
 
 ## Resources
-- [NBA API github repo](https://github.com/swar/nba_api) this goes into the extractor repo 
-- streamlit snowflake connection: https://docs.streamlit.io/develop/tutorials/databases/snowflake
-streamlit installation and getting started with virtual environment: https://docs.streamlit.io/get-started/installation/command-line
-dbt snowflake config: https://www.getdbt.com/blog/how-we-configure-snowflake
-
-advance stat dashboard https://medium.com/@toky-axel/building-an-interactive-basketball-stats-dashboard-using-api-and-jupyter-notebook-in-python-3b2c2c191ec9
-template for creating project readme: https://www.startdataengineering.com/post/data-engineering-project-to-impress-hiring-managers/
-https://towardsdatascience.com/creating-multipage-applications-using-streamlit-efficiently-b58a58134030
-
-replace player id for image: https://cdn.nba.com/headshots/nba/latest/1040x760/1630346.png
+- [NBA API github repo](https://github.com/swar/nba_api) NBA API wrapper package.
+- [Blog](https://www.getdbt.com/blog/how-we-configure-snowflake) for recommended Snowflake config
 
 ## Change Log:
