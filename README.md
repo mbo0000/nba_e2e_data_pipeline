@@ -55,7 +55,7 @@ For the extraction and loading process, we leverage a Python-based solution runn
 - **Data Sources**: Sourced from various NBA API endpoints. Execution will be triggerred by Airflow per preset scheduled.
 - **Process**: Once extracted, the raw data is loaded into Snowflake's staging area, ready for the next steps in the pipeline.
 
-Installation and setup instructions [here]().
+Follow installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_extractor_package.git).
 
 ### 3. Orchestration
 We will use Airflow as our orchestration tool to execute DAGs according to scheduled frequencies.
@@ -63,7 +63,7 @@ We will use Airflow as our orchestration tool to execute DAGs according to sched
 - **Tasks**: Each DAG included tasks from data extraction, updating table schema, moving data from staging to raw, and cleanup operations to maintain system hygiene.
 - **Automation**: Ensuring tasks are performed on a specified schedule with minimal manual intervention, enhancing reliability and efficiency.
 
-Installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_airflow).
+Follow installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_airflow).
 
 ### 4. Transformation(dbt)
 The data transformation phase is handled by the Data Build Tool (dbt).
@@ -71,7 +71,7 @@ The data transformation phase is handled by the Data Build Tool (dbt).
 - **Environment**: We utilize dbt Cloud for project hosting, providing a platform for daily execution and facilitating CI.
 - **Benefits**: This setup enables us to maintain high data quality and consistency, and readily adapt to changing project requirements.
 
-Installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_dbt_dev).
+Follow installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_dbt_dev).
 
 ### 5. BI Solution
 
@@ -80,7 +80,7 @@ For our Business Intelligence (BI) solution, we use [Streamlit](https://streamli
 - **Deployment**: The application is hosted on the Streamlit server, providing easy public access to dashboards.
 - **User Interaction**: Streamlit allows users to interact with and visualize data through intuitive interfaces, making insights accessible and actionable.
 
-Installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_streamlit_dash_app).
+Follow installation and setup instructions [here](https://github.com/mbo0000/nba_e2e_streamlit_dash_app).
 
 ## Future Work & Improvement
 - Consider serverless hosting(AWS, GCP) instead of local.
