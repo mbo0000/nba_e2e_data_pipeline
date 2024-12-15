@@ -13,9 +13,7 @@ This project delivers a streamlined solution for NBA statistics, offering a simp
 - Low to no cost
 
 ## Detailed Design
-
-overview of the entire pipeline
-![Diagram](insert url here)
+![Diagram](https://github.com/mbo0000/nba_e2e_data_pipeline/blob/main/images/pipeline.png)
 
 ### 1. Snowflake Management and Config
 This template is *OPTIONAL* for personal project but highly recommend for a group based or a bigger project. Tho the config is specific to this project, it can be adjusted/enhanced to your projects needs.
