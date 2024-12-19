@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project delivers a streamlined solution for NBA statistics, offering a simplified version of key and advanced metrics for teams and players, without replicating the official [NBA Stats](https://www.nba.com/stats). The primary goal is to provide an end-to-end template, from data warehousing to business intelligence reports, rather than creating a production-ready pipeline.
+This project delivers a streamlined solution for individualize NBA team statistics, offering a simplified version of key and advanced metrics for teams and players, without replicating the official [NBA Stats](https://www.nba.com/stats). The primary goal is to provide an end-to-end template, from data warehousing to business intelligence reports, rather than creating a production-ready pipeline.
 
 [Live Dashboard URL](insert url here)
 
